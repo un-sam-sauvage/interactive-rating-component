@@ -27,7 +27,7 @@ body{
 .main{
     border-radius: 30px;
     margin : 25vh auto;
-    width: 30%;
+    width: 19vw;
     height : 70%;
     background-image: radial-gradient(circle at top, var(--dark_blue) , var(--medium_dark_blue));
     padding:2%
