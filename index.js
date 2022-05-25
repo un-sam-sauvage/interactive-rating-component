@@ -10,7 +10,10 @@ document.querySelectorAll(".btn-rating").forEach(element => {
 document.querySelector("#submit").addEventListener("click" , ()=>{
     if(nbStar >= 0){
         document.querySelector("#rating").style.display = "none";
-        document.querySelector("#thank-you").style.display = "block";
-        document.querySelector("#nb-stars").textContent = nbStar;
+        document.querySelector("#nb-stars").textContent = nbStar;    
+        document.querySelector("#main").classList.add("turn");
+        setTimeout(() => {
+            document.querySelector("#thank-you").style.display = "block";
+        }, 500);
     }
 })

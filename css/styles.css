@@ -30,7 +30,8 @@ body{
     width: 19vw;
     height : 70%;
     background-image: radial-gradient(circle at top, var(--dark_blue) , var(--medium_dark_blue));
-    padding:2%
+    padding:2%;
+    transition: .3s ease-in-out;
 }
 .star{
     background-color: var(--dark_blue);
@@ -77,6 +78,10 @@ body{
     background-color: var(--medium_grey) ;
 }
 
+.turn{
+    transform: rotateY(180deg);
+}
+
 
 .submit{
     position: relative;
@@ -98,10 +103,21 @@ body{
 
 .thank-you{
     text-align: center;
-    display: none;
+    position: absolute;
+    transform: scale(0);
+}
+.main.turn .thank-you{
+    position: inherit;
+    transform: scale(1);
+    transition: .5s ease-in-out;
+}
+
+.thank-you h1{
+    transform: rotateY(180deg);
 }
 .thank-you p{
     color: var(--medium_grey);
+    transform: rotateY(180deg);
 }
 .feedback p{
     background-color: var(--dark_blue);
@@ -114,12 +130,14 @@ body{
 }
 .thank-you .svg{
     margin: 0 auto;
-    width: 60%;
+    width: 50%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .thank-you svg{
  transform: scale(0.75);
+ transform: rotateY(180deg);
 }
 
 footer{
