@@ -1,0 +1,136 @@
+:root{
+    --white : hsl(0, 0%, 100%);
+    --light_grey:hsl(217, 12%, 63%);
+    --medium_grey :hsl(216, 12%, 54%);
+    --light_blue : hsl(214, 21%, 30%);
+    --dark_blue : hsl(213, 19%, 18%);
+    --medium_dark_blue : hsl(215, 23%, 10%);
+    --very_dark_blue : hsl(216, 12%, 8%);
+    --orange :hsl(25, 97%, 53%)
+}
+
+p{
+    font-family: 'Overpass', sans-serif;
+    font-weight: 400;
+}
+h1{
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+}
+body{
+    background-color: var(--very_dark_blue);
+    color: var(--white);
+    margin : 0;
+    padding : 0;
+}
+
+.main{
+    border-radius: 30px;
+    margin : 25vh auto;
+    width: 30%;
+    height : 70%;
+    background-image: radial-gradient(circle at top, var(--dark_blue) , var(--medium_dark_blue));
+    padding:2%
+}
+.star{
+    background-color: var(--dark_blue);
+    border-radius: 50%;
+    width: fit-content;
+    height: fit-content;
+    padding: 3%;
+}
+
+.rating p{
+    color : var(--light_grey)
+}
+.rate{
+    position: relative;
+    left: 2%;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-bottom: 5%;
+}
+.rate button{
+    border : 0;
+    width: 100%;
+    height: 90%;
+    text-align: center;
+    margin : 0 3%;
+    background-color: var(--dark_blue);
+    border-radius: 50%;
+}
+.rate p{
+    color: var(--medium_grey);
+}
+.rate button:hover{
+    background-color: var(--orange);
+}
+.rate button:hover p{
+    color: var(--white);
+}
+.rate button:focus p{
+    color: var(--white);
+}
+
+.rate button:focus{
+    background-color: var(--medium_grey) ;
+}
+
+
+.submit{
+    position: relative;
+    background-color: var(--orange);
+    border : 0;
+    color : var(--white);
+    padding : 3% 40%;
+    border-radius: 50px;
+    left: 5%;
+}
+.submit:hover{
+    background-color: var(--white);
+    color: var(--orange);
+}
+.submit:active{
+    background-color: var(--white);
+    color: var(--orange);
+}
+
+.thank-you{
+    text-align: center;
+    display: none;
+}
+.thank-you p{
+    color: var(--medium_grey);
+}
+.feedback p{
+    background-color: var(--dark_blue);
+    color: var(--orange);
+    padding: 2%;
+    border-radius: 50px;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
+.thank-you .svg{
+    margin: 0 auto;
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+.thank-you svg{
+ transform: scale(0.75);
+}
+
+footer{
+    color: var(--medium_grey);
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+@media (max-width:375px) {
+    .main{
+        width: 85%;
+    }
+}
