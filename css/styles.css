@@ -11,11 +11,14 @@
 
 p{
     font-family: 'Overpass', sans-serif;
+    font-size: .8vw;
     font-weight: 400;
 }
 h1{
     font-family: 'Overpass', sans-serif;
     font-weight: 700;
+    font-size: 1.2vw;
+
 }
 body{
     background-color: var(--very_dark_blue);
@@ -27,7 +30,7 @@ body{
 .main{
     border-radius: 30px;
     margin : 25vh auto;
-    width: 19vw;
+    width: 25vw;
     height : 70%;
     background-image: radial-gradient(circle at top, var(--dark_blue) , var(--medium_dark_blue));
     padding:2%;
@@ -42,22 +45,25 @@ body{
 }
 
 .rating p{
-    color : var(--light_grey)
+    color : var(--light_grey);
 }
 .rate{
     position: relative;
-    left: 2%;
     display: flex;
     align-items: center;
+    justify-content: center;
     list-style: none;
     margin-bottom: 5%;
 }
 .rate button{
+    display: flex;
     border : 0;
-    width: 100%;
-    height: 90%;
+    width: 3vw;
+    height: 3vw;
     text-align: center;
-    margin : 0 3%;
+    justify-content: center;
+    align-items: center;
+    margin : 0 1vw;
     background-color: var(--dark_blue);
     border-radius: 50%;
 }
@@ -88,9 +94,12 @@ body{
     background-color: var(--orange);
     border : 0;
     color : var(--white);
-    padding : 3% 40%;
+    width: 25.5vw;
+    padding : 2% 0;
     border-radius: 50px;
-    left: 5%;
+    font-size: 1.4vw;
+    letter-spacing: .25vw;
+    
 }
 .submit:hover{
     background-color: var(--white);
@@ -146,9 +155,49 @@ footer{
     width: 70%;
     margin: 0 auto;
 }
-
-@media (max-width:375px) {
+@media (max-width:900px){
+    p{
+        font-size: 1.2vw;
+    }
+    h1{
+        font-size: 3vw;
+    }
     .main{
-        width: 85%;
+        width: 40vw;
+    }
+    .submit{
+        width: 40vw;
+    }
+    .rate button{
+        width: 4vw;
+        height: 4vw;
+        font-size: 2vw;
+        margin : 1.5vw;
+    }
+}
+@media (max-width:430px) {
+    .rate button{
+        width : 8vw;
+        height : 8vw;
+        font-size: 2vw;
+        margin: 0 3vw;
+    }
+    .rating h1{
+        font-size: 4vw;
+    }
+    .rating p{
+        font-size: 3vw;
+    }
+    .feedback p{
+        font-size: 4vw;
+    }
+    .submit{
+        width: 72vw;
+        padding: 0 inherit;
+        left: 4vw;
+        font-size: 2vw;
+    }
+    .main{
+        width: 80vw;
     }
 }
