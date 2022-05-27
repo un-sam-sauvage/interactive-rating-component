@@ -65,20 +65,17 @@ body{
     align-items: center;
     margin : 0 1vw;
     background-color: var(--dark_blue);
+    color: var(--medium_grey);
     border-radius: 50%;
 }
-.rate p{
-    color: var(--medium_grey);
-}
+
 .rate button:hover{
     background-color: var(--orange);
 }
-.rate button:hover p{
+.rate button:hover, .rate button:focus{
     color: var(--white);
 }
-.rate button:focus p{
-    color: var(--white);
-}
+
 
 .rate button:focus{
     background-color: var(--medium_grey) ;
@@ -128,7 +125,7 @@ body{
     color: var(--medium_grey);
     transform: rotateY(180deg);
 }
-.feedback p{
+.feedback{
     background-color: var(--dark_blue);
     color: var(--orange);
     padding: 2%;
@@ -188,7 +185,8 @@ footer{
     .rating p{
         font-size: 3vw;
     }
-    .feedback p{
+    .feedback
+    {
         font-size: 4vw;
     }
     .submit{
